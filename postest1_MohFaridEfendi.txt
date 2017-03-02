@@ -1,0 +1,36 @@
+predicates
+nondeterm nama(symbol)
+nondeterm kewarganegaraan(symbol,symbol)
+nondeterm sehat(symbol,symbol)
+nondeterm disabilitas(symbol,symbol)
+nondeterm lulus(symbol)
+
+clauses
+
+lulus(N):-
+kewarganegaraan(N,indonesia),
+sehat(N,sehat),
+disabilitas(N,tidak).
+
+nama(andi).
+nama(anya).
+nama(ika).
+nama(lulu).
+
+kewarganegaraan(andi,indonesia).
+kewarganegaraan(anya,aseng).
+kewarganegaraan(ika,indonesia).
+kewarganegaraan(lulu,indonesia).
+
+sehat(andi,sehat).
+sehat(anya,sehat).
+sehat(ika,sehat).
+sehat(lulu,sakit).
+
+disabilitas(andi,iya).
+disabilitas(anya,tidak).
+disabilitas(ika,tidak).
+disabilitas(lulu,tidak).
+
+goal
+lulus(N).
